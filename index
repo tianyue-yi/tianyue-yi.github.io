@@ -1,1 +1,7 @@
-Hello World html
+<!DOCTYPE html>
+<html>
+<body>
+<h1>Hello!</h1>
+<p>This is Tia. Welcome to my Web Dev class site.</p>
+</body>
+</html>
