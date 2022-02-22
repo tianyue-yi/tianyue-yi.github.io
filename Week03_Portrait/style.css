@@ -1,14 +1,21 @@
 body {
     background-color: #FAF8F6;
 }
-a:link {
+h1 {
+    
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 18px;
+    font-size: 24px;
     margin-left: 50px;
     margin-top: 40px;
     padding: 8px;
     background-color: rgba(71, 110, 71, 0.815);
+}
+a:link {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 18px;
     color: #FAF8F6;
+    padding: 8px;
+    background-color: rgba(71, 110, 71, 0.815);
     text-decoration: none;
 }
 a:visited {
