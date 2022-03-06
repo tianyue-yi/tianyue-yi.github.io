@@ -1,5 +1,5 @@
 body {
-    background-color: #181818;
+    background-color: #FFB4FD;
     font-family: Aldrich;
     color: #FFFFFF;
 }
@@ -28,8 +28,15 @@ a.button1:hover{
     background-color:#FFFFFF;
 }
 
-.ball {
-    width: 282px;
+.rotateImage {
+    position: absolute;
+    width: 570px;
+    height: 570px;
+    top: 12%;
+    left: 31%;
+    /* transform: translate(50%, 100%); */
+    animation: rotation 6s infinite linear;
+    /* width: 282px;
     height: 282px;
     background-color: #FFFFFF;
     position: absolute;
@@ -37,7 +44,27 @@ a.button1:hover{
     left: 50%;
     transform: translate(-50%, -10%);
     border-radius: 50%;
-    overflow: hidden;
+    overflow: hidden; */
+}
+@keyframes rotation {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(359deg);
+    }
+}
+.scroller {
+    position: absolute;
+    top: 25%;
+    left: 76%;
+    width: 300px;
+    height: 400px;
+    overflow-y: scroll;
+    background-color: rgba(213, 213, 213, 0.37);
+    border: #DB3F73 solid 10px;
+    padding: 10px;
+    scrollbar-width: thin;
 }
 .eye {
     width: 200px;
@@ -62,7 +89,7 @@ a.button1:hover{
     border-radius: 50%;
     border: 30px solid #576574;
     cursor: pointer;
-    
+
 }
 .shut {
     width: 160px;
@@ -74,15 +101,15 @@ a.button1:hover{
     transform: translate(-50%, -50%) rotate(45deg);
     z-index: 999;
     cursor: pointer;
-    
+
 }
 .shut span {
     display: block;
     width: 100%;
     height: 10%;
-    background-color: black; 
+    background-color: #DB3F73;
     border-radius: 0 0 60% 60%;
-    
+
     transition: 0.4s all;
 }
 
