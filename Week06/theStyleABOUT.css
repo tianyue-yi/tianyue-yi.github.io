@@ -1,0 +1,29 @@
+body {
+    background-color: #ffffff;
+    font-family: Aldrich;
+    color: #000000;
+    padding: 10%;
+}
+h1 {
+    font-size: 48px;
+}
+p{
+    /* margin-left: 10%;
+    margin-right: 10%; */
+    font-size: 24px;
+    line-height: 1.6;
+}
+img{
+    display: none;
+}
+.highlighted {
+    font-style: italic; 
+    background-color: rgb(115, 236, 161);
+    cursor: pointer;
+}
+span:hover + img{
+    display: block;
+    position:absolute;
+    Left: 50%; 
+    top: 30%;    
+}
