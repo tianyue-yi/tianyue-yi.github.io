@@ -32,8 +32,8 @@ a.button1:hover{
     position: absolute;
     width: 570px;
     height: 570px;
-    top: 30%;
-    left: 15%;
+    top: 25%;
+    left: 30%;
     transform: translate(-50%, -10%);
     animation: rotation 6s infinite linear;
     /* width: 282px;
