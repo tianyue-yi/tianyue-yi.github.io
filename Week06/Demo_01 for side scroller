@@ -1,0 +1,38 @@
+CSS
+.scroller {
+    position: absolute;
+    top: 0%;
+    left: 50%;
+    width: 50vw;
+    height: 100vh;
+    overflow-y: scroll;
+    background-color: rgb(255, 255, 255);
+    padding: 10px;
+    scrollbar-width: thin;
+}
+.column {
+    flex: 50%;
+    width: 50%;
+    padding: 5px;
+}
+.row {
+    display: flex;
+}
+
+HTML
+<div class="scroller"> <!-- piece_01 -->
+            <h1 style="font-size: 36px; padding: 10px;">
+                Ten Pieces
+            </h1>
+            <div class="row">
+                <p class="column">
+                    The title “We=Link: Ten Easy Pieces” denotes a community of solidarity as a network of empowerment. 
+                    The ten Easy Pieces, featuring new commissions by the artists aaajiao, Tega Brain & Sam Lavigne, JODI, LI Weiyi, 
+                    Slime Engine and YE Funa in conjunction with works by Evan Roth, Helmut Smits, Yangachi and Raphaël Bastide.
+                </p>
+                <p class="column">
+                    <img src="TEP.jpg" width="100%">
+                </p>
+
+            </div>
+        </div>
