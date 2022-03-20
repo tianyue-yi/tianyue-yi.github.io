@@ -1,0 +1,69 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+body {
+    background-color: #222;
+    animation-name: color;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+}
+  
+@keyframes color {
+    0% {
+      background-color: rgb(231, 168, 73);
+    }
+    50% {
+      background-color: #f44e42;
+    }
+    100% {
+      background-color: rgb(231, 168, 73);
+    }
+}
+/* no background needed */
+/* .container {
+	z-index: 1;
+	position: relative;
+	overflow: hidden;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-image: url('https://images.unsplash.com/photo-1446824505046-e43605ffb17f');
+	min-height: 100vh;
+	min-height: 35rem;
+	background-size: cover;
+	background-position: center center;
+	padding: 2rem;
+} */
+
+.goat {
+	background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/174479/bird-cells-new.svg);
+	background-image:"jump_cycle.svg";
+	background-size: auto 100%;
+	width: 150px;
+	height: 200px;
+	will-change: background-position;
+	
+	animation-name: run-cycle;
+	animation-duration: 1s;
+	animation-delay: -0.5s;
+	animation-timing-function: steps(10);
+	animation-iteration-count: infinite;
+}
+
+.goat-container {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	will-change: transform;
+}
+
+@keyframes run-cycle {
+	
+	100% {
+		background-position: -3600px 0;
+	}
+	
+}
