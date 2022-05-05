@@ -1,0 +1,71 @@
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Canvas fillRect</title>
+	<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <link rel="stylesheet" href="r.css">
+    <script src="r.js"></script>
+</head>
+
+<body>
+
+
+    <!-- <div onload="makeImage();">
+        <div class="contents" id="content"></div>
+        <button onclick="nextImage()">Next Image</button>
+    </div> -->
+    
+    <div class="wrapper">
+        
+        
+        <div style="padding: 50px; font-size:x-large;"> 
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit, alias.
+        </div>
+        
+        <div>
+            <img id="mainImage"/>
+        </div>
+
+    </div>
+    
+    <!-- <img id="images"> -->
+    <button onclick="showImage()">Next Image</button>
+        
+        <script>
+            var myImage = document.getElementById('mainImage');
+            var imageArray = ["img01.jpg",
+            "img02.jpg",
+            "img03.jpg",
+            "img04.jpg",
+            "img05.jpg",
+            "img06.jpg",
+            "img07.jpg",
+            "img08.jpg",
+            "img09.jpg",
+            "img10.jpg"];
+            var imageIndex = 0;
+            function random_index() {
+                imageIndex = Math.floor(Math.random() * imageArray.length);
+            }
+            function showImage() {
+                selectedImage = imageArray[random_index];
+                console.log(imageIndex);
+                myImage.setAttribute("src", imageArray[imageIndex]);
+            }
+            
+                // imageIndex++;
+                // if (imageIndex > 4) {
+                //     imageIndex = 0;
+                // }
+            //}
+
+            $('button').on('click', function(){
+              $(".wrapper").append("<div><img id='mainImage'/></div>")  
+            })
+        </script>
+</body>
+
+</html>

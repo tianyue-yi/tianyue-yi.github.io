@@ -1,0 +1,141 @@
+<html>
+
+	<head>
+		<title> Recipe Recommendation (web version)</title>
+		<meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1">
+		<meta charset="utf-8">
+		<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+		<link rel="stylesheet" type="text/css" href="recipeRec.css">
+        <link href="https://fonts.googleapis.com/css2?family=Didact+Gothic&display=swap" rel="stylesheet">
+		<script src="recipeRec.js" defer></script>
+
+	</head>
+
+	<body style="background-color: #f1f1f1">
+        <div id="container-ingred">
+            <div class="col">
+                <div class="dropdown">
+                    <button class="veggie">Veggie</button>
+                    <div class="dropdown-content_veggie">
+                        <ul onclick="showImage()">
+                            <li>onion</li>
+                            <li>red onion</li>
+                            <li>pepper</li>
+                            <li>broccoli</li>
+                            <li>tomato</li>
+                            <li>potatp</li>
+                            <li>carrot</li>
+                            <li>celery</li>
+                            <li>mushroom</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="dropdown">
+                    <button class="dairy">Dairy & Egg</button>
+                    <div class="dropdown-content_dairy">
+                        <ul onclick="showImage()">
+                            <li>butter</li>
+                            <li>egg</li>
+                            <li>whipped cream</li>
+                            <li>yogurt</li>
+                            <li>half and half</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="dropdown">
+                    <button class="meat">Meat</button>
+                    <div class="dropdown-content_meat">
+                        <ul onclick="showImage()">
+                            <li>bacon</li>
+                            <li>beef steak</li>
+                            <li>ham</li>
+                            <li>sausage</li>
+                            <li>chicken breast</li>
+                            <li>turkey breast</li>
+                            <li>pork</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="dropdown">
+                    <button class="dairy">Seasoning</button>
+                    <div class="dropdown-content_dairy">
+                        <ul onclick="showImage()">
+                            <li>chili powder</li>
+                            <li>salt</li>
+                            <li>curry</li>
+                            <li>taco seasoning</li>
+                            <li>pumpkin pie spice</li>
+                            <li>white miso</li>
+                        </ul>  
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="dropdown">
+                    <button class="veggie">Herb</button>
+                    <div class="dropdown-content_veggie">
+                        <ul onclick="showImage()">
+                            <li>cinnamom</li>
+                            <li>cilantro</li>
+                            <li>basil</li>
+                            <li>thyme</li>
+                            <li>garlic powder</li>
+                            <li>ginger root</li>
+                        </ul>
+                        
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="dropdown">
+                    <button class="meat">Bread</button>
+                    <div class="dropdown-content_meat">
+                        <ul onclick="showImage()">
+                            <li>bread</li>
+                            <li>bread crumbs</li>
+                            <li>flour tortillas</li>
+                            <li>baguette</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <br>
+<!-- check after clicking------------------------------------------------------------------------ -->
+        
+        <br>
+        <div class="wrapper">
+            <div style="padding: 50px; font-size: xx-large; font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">
+                YOU CAN MAKE:
+            </div>
+            <div>
+                <img id="mainImage" width="300">
+            </div>
+
+            <div>
+                <img id="mainImage" width="300">
+            </div>
+            
+            
+        </div>
+
+
+
+    
+
+
+	</body>
+
+</html>
