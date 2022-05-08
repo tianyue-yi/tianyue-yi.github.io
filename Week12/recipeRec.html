@@ -17,16 +17,16 @@
                 <div class="dropdown">
                     <button class="veggie">Veggie</button>
                     <div class="dropdown-content_veggie">
-                        <ul onclick="showImage()">
-                            <li>onion</li>
-                            <li>red onion</li>
-                            <li>pepper</li>
-                            <li>broccoli</li>
-                            <li>tomato</li>
-                            <li>potatp</li>
-                            <li>carrot</li>
-                            <li>celery</li>
-                            <li>mushroom</li>
+                        <ul>
+                            <li onclick = "recipeDisplay()">onion</li>
+                            <li onclick = "recipeDisplay()">red onion</li>
+                            <li onclick = "recipeDisplay()">pepper</li>
+                            <li onclick = "recipeDisplay()">broccoli</li>
+                            <li onclick = "recipeDisplay()">tomato</li>
+                            <li onclick = "recipeDisplay()">potato</li>
+                            <li onclick = "recipeDisplay()">carrot</li>
+                            <li onclick = "recipeDisplay()">celery</li>
+                            <li onclick = "recipeDisplay()">mushroom</li>
                         </ul>
                     </div>
                 </div>
@@ -36,12 +36,12 @@
                 <div class="dropdown">
                     <button class="dairy">Dairy & Egg</button>
                     <div class="dropdown-content_dairy">
-                        <ul onclick="showImage()">
-                            <li>butter</li>
-                            <li>egg</li>
-                            <li>whipped cream</li>
-                            <li>yogurt</li>
-                            <li>half and half</li>
+                        <ul>
+                            <li onclick = "recipeDisplay()">butter</li>
+                            <li onclick = "recipeDisplay()">egg</li>
+                            <li onclick = "recipeDisplay()">whipped cream</li>
+                            <li onclick = "recipeDisplay()">yogurt</li>
+                            <li onclick = "recipeDisplay()">half and half</li>
                         </ul>
                     </div>
                 </div>
@@ -51,14 +51,14 @@
                 <div class="dropdown">
                     <button class="meat">Meat</button>
                     <div class="dropdown-content_meat">
-                        <ul onclick="showImage()">
-                            <li>bacon</li>
-                            <li>beef steak</li>
-                            <li>ham</li>
-                            <li>sausage</li>
-                            <li>chicken breast</li>
-                            <li>turkey breast</li>
-                            <li>pork</li>
+                        <ul>
+                            <li onclick = "recipeDisplay()">bacon</li>
+                            <li onclick = "recipeDisplay()">beef steak</li>
+                            <li onclick = "recipeDisplay()">ham</li>
+                            <li onclick = "recipeDisplay()">sausage</li>
+                            <li onclick = "recipeDisplay()">chicken breast</li>
+                            <li onclick = "recipeDisplay()">turkey breast</li>
+                            <li onclick = "recipeDisplay()">pork</li>
                         </ul>
                     </div>
                 </div>
@@ -68,13 +68,13 @@
                 <div class="dropdown">
                     <button class="dairy">Seasoning</button>
                     <div class="dropdown-content_dairy">
-                        <ul onclick="showImage()">
-                            <li>chili powder</li>
-                            <li>salt</li>
-                            <li>curry</li>
-                            <li>taco seasoning</li>
-                            <li>pumpkin pie spice</li>
-                            <li>white miso</li>
+                        <ul>
+                            <li onclick = "recipeDisplay()">chili powder</li>
+                            <li onclick = "recipeDisplay()">salt</li>
+                            <li onclick = "recipeDisplay()">curry</li>
+                            <li onclick = "recipeDisplay()">taco seasoning</li>
+                            <li onclick = "recipeDisplay()">pumpkin pie spice</li>
+                            <li onclick = "recipeDisplay()">white miso</li>
                         </ul>  
                     </div>
                 </div>
@@ -84,13 +84,13 @@
                 <div class="dropdown">
                     <button class="veggie">Herb</button>
                     <div class="dropdown-content_veggie">
-                        <ul onclick="showImage()">
-                            <li>cinnamom</li>
-                            <li>cilantro</li>
-                            <li>basil</li>
-                            <li>thyme</li>
-                            <li>garlic powder</li>
-                            <li>ginger root</li>
+                        <ul>
+                            <li onclick = "recipeDisplay()">cinnamom</li>
+                            <li onclick = "recipeDisplay()">cilantro</li>
+                            <li onclick = "recipeDisplay()">basil</li>
+                            <li onclick = "recipeDisplay()">thyme</li>
+                            <li onclick = "recipeDisplay()">garlic powder</li>
+                            <li onclick = "recipeDisplay()">ginger root</li>
                         </ul>
                         
                     </div>
@@ -101,11 +101,11 @@
                 <div class="dropdown">
                     <button class="meat">Bread</button>
                     <div class="dropdown-content_meat">
-                        <ul onclick="showImage()">
-                            <li>bread</li>
-                            <li>bread crumbs</li>
-                            <li>flour tortillas</li>
-                            <li>baguette</li>
+                        <ul>
+                            <li onclick = "recipeDisplay()">bread</li>
+                            <li onclick = "recipeDisplay()">bread crumbs</li>
+                            <li onclick = "recipeDisplay()">flour tortillas</li>
+                            <li onclick = "recipeDisplay()">baguette</li>
                         </ul>
                     </div>
                 </div>
@@ -116,24 +116,19 @@
 <!-- check after clicking------------------------------------------------------------------------ -->
         
         <br>
-        <div class="wrapper">
+        <div class="wrapper" id="myRec">
             <div style="padding: 50px; font-size: xx-large; font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">
                 YOU CAN MAKE:
             </div>
-            <div>
-                <img id="mainImage" width="300">
+            <!-- <div>
+                <img width="300">
             </div>
-
             <div>
-                <img id="mainImage" width="300">
-            </div>
+                <img width="300">
+            </div> -->
             
             
         </div>
-
-
-
-    
 
 
 	</body>

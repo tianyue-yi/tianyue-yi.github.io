@@ -1,42 +1,36 @@
-
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JavaScript Canvas fillRect</title>
-	<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
-    <link rel="stylesheet" href="r.css">
-    <script src="r.js"></script>
-</head>
-
-<body>
-
-
-    <!-- <div onload="makeImage();">
-        <div class="contents" id="content"></div>
-        <button onclick="nextImage()">Next Image</button>
-    </div> -->
+<html> 
+  
+<head> 
+    <title> 
+        How to create an image element
+        dynamically using JavaScript ?
+    </title>     
+</head> 
+  
+<body id = "body" style = "text-align:center;"> 
+      
+    <h1 style = "color:green;" > 
+        GeeksforGeeks 
+    </h1> 
     
-    <div class="wrapper">
-        
-        
-        <div style="padding: 50px; font-size:x-large;"> 
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit, alias.
-        </div>
-        
-        <div>
-            <img id="mainImage"/>
-        </div>
-
-    </div>
+    <!-- add a text (up) in js -->
+    <!-- <p id = "GFG_UP" style = "font-size: 15px; font-weight: bold;"> 
+    </p>  -->
     
-    <!-- <img id="images"> -->
-    <button onclick="showImage()">Next Image</button>
-        
-        <script>
-            var myImage = document.getElementById('mainImage');
-            var imageArray = ["img01.jpg",
+    <!-- click event! -->
+    <button onclick = "myFunction()"> 
+        click here 
+    </button> 
+    
+    <!-- add a text (down) in js -->
+    <!-- <p id = "GFG_DOWN" style = "color:green; font-size: 20px; font-weight: bold;"> 
+    </p>  -->
+      
+    <script> 
+        // var up = document.getElementById('GFG_UP'); 
+        // up.innerHTML = "Click on the button to add image element"; 
+        // var down = document.getElementById('GFG_DOWN'); 
+        var imageArray = ["img01.jpg",
             "img02.jpg",
             "img03.jpg",
             "img04.jpg",
@@ -45,27 +39,20 @@
             "img07.jpg",
             "img08.jpg",
             "img09.jpg",
-            "img10.jpg"];
-            var imageIndex = 0;
-            function random_index() {
-                imageIndex = Math.floor(Math.random() * imageArray.length);
-            }
-            function showImage() {
-                selectedImage = imageArray[random_index];
-                console.log(imageIndex);
-                myImage.setAttribute("src", imageArray[imageIndex]);
-            }
+        ];
+        var imageIndex = 0;
+        button.onclick = myFunction;
+
+        function myFunction() {
+            var myImage = document.createElement("IMG");
+            imageIndex = Math.floor(Math.random() * imageArray.length); // create random index
             
-                // imageIndex++;
-                // if (imageIndex > 4) {
-                //     imageIndex = 0;
-                // }
-            //}
+            myImage.setAttribute("src", imageArray[imageIndex]);
+            
+            document.body.appendChild(myImage);  
+        }
 
-            $('button').on('click', function(){
-              $(".wrapper").append("<div><img id='mainImage'/></div>")  
-            })
-        </script>
-</body>
-
+    </script> 
+</body> 
+  
 </html>

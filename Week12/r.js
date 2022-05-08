@@ -1,56 +1,56 @@
 
-// $(document).ready(function() {
-  
-//   $('button').on('click', function(){
-//     $(".wrapper").append("<div id = 'images'> test it out </div>")  
-//   })
-
-// })
-
-
-// var myImages = ["img01.jpg",
+// var myImage = document.getElementById('mainImage');
+// var imageArray = ["img01.jpg",
 // "img02.jpg",
 // "img03.jpg",
 // "img04.jpg",
-// "img05.jpg"];
-// var index = 0;
+// "img05.jpg",
+// "img06.jpg",
+// "img07.jpg",
+// "img08.jpg",
+// "img09.jpg",
+// ];
+// var imageIndex = 0;
 
-// function makeImage() {
-//   document.getElementsByClassName("images").src = image[index];
-//   //  var img = document.createElement('img')
-//   //  img.src = image[index];
-//   //  document.getElementsByClassName('images').src = image[2];
+// function showImage() { // pass it on diff blocks
+  
+//   function random_index() {
+    
+//   }
+//   imageIndex = Math.floor(Math.random() * imageArray.length);
+  
+//   console.log(imageIndex);
+//   myImage.setAttribute("src", imageArray[imageIndex]);
+  
+//   //document.getElementById("wrapper").appendChild("myImage");
 // }
 
-// function nextImage(){
-//   var img = document.getElementById('content').getElementsByTagName('img')[0]
-//   index++;
-//   index = index % images.length; 
-//   img.src = images[index];
-// }
+// $('button').on('click', function(){
+//   $(".wrapper").append("<div> <img id='mainImage'></div>")  
+// })
 
-// function myFunction() {
-//   alert("Page is loaded");
-// }
- //-------------------------------------------------------------------------
-var myImage = document.getElementById('mainImage');
+
+
+// TRY again
+
 var imageArray = ["img01.jpg",
 "img02.jpg",
 "img03.jpg",
 "img04.jpg",
-"img05.jpg"];
-var imageIndex = 0;
+"img05.jpg",
+"img06.jpg",
+"img07.jpg",
+"img08.jpg",
+"img09.jpg",
+];
 
-function changeImage() {
 
+let img = document.querySelector('img');
+let btn = document.querySelector('LI')
 
-  myImage.setAttribute("src", imageArray[imageIndex]);
-  imageIndex++;
-  if (imageIndex > 4) {
-    imageIndex = 0;
-  }
-}
-
-$('button').on('click', function(){
-  $(".wrapper").append("<div id = 'mainImage'> test it out </div>")  
+btn.addEventListener('click', () => {
+    imageIndex = Math.floor(Math.random() * imageArray.length); // create random index
+    img.src = imageArray[imageIndex];
+    
+    $(".wrapper").append("<div> <img id='mainImage'></div>")
 })
