@@ -59,15 +59,19 @@ var imageArray = ["img01.jpg",
 ];
 var imageIndex = 0;
 
-$('LI').on('click', function(){
-  imageIndex = Math.floor(Math.random() * imageArray.length); // create random index
-  selectedImage = imageArray[imageIndex];
-  console.log(imageIndex);
 
-  myImage.setAttribute("src", imageArray[imageIndex]);
-  $(".wrapper").append("<div>" + myImage +"</div>");
-  //$(".wrapper").append("<div><img id='mainImage'/>test it out</div>")  
-})
+function recipeDisplay() {
+    var myImage = document.createElement("IMG");
+    imageIndex = Math.floor(Math.random() * imageArray.length); // create random index
+    
+    myImage.setAttribute("src", imageArray[imageIndex]);
+    myImage.setAttribute("width", "304");
+    myImage.setAttribute("height", "228");
+    
+    document.getElementById("myRec").appendChild(myImage);  
+}
+
+
 
 
 // console.log ('about to fetch an image')
