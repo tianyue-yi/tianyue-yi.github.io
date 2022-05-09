@@ -1,0 +1,218 @@
+
+#container-ingred {
+    display: flex;
+    /* right: 0;
+    width: 50%; */
+}
+.col {
+    margin-top: 20px;
+    padding: 20px;
+    flex: 1;
+    background-color: #f1f1f1;
+    min-height: 100px;
+}
+.dropdown {
+    position: absolute;
+    display: inline-block;
+    border-radius: 10px;
+}
+
+/*first drop down button - veggie*/
+.veggie {
+    width: 150px;
+    background-color: white;
+    color: #00a95a;
+    padding: 16px;
+    font-size: 18px;
+    border:2px solid #30c07f;
+    border-radius: 5px;
+}
+.dairy {
+    width: 150px;
+    background-color: white;
+    color: #0180cf;
+    padding: 16px;
+    font-size: 18px;
+    border:2px solid #62b0e1;
+    border-radius: 5px;
+}
+.meat {
+    width: 150px;
+    background-color: white;
+    color: #ec9900;
+    padding: 16px;
+    font-size: 18px;
+    border:2px solid #ffc55a;
+    border-radius: 5px;
+}
+.dropdown-content_veggie {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 9px 18px 0px rgba(0,0,0,0.2);
+    border-radius: 10px;
+    z-index: 1;
+}
+.dropdown-content_veggie ul li {
+    color: #00a95a;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+.dropdown-content_veggie ul li:hover {background-color: #ddd;} /*list under veggie*/
+.dropdown:hover .veggie {background-color: #30c07f; color: white;} /*veggie button*/
+.dropdown:hover .dropdown-content_veggie {display: block;}
+
+.dropdown-content_dairy {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 9px 18px 0px rgba(0,0,0,0.2);
+    border-radius: 10px;
+    z-index: 1;
+}
+.dropdown-content_dairy ul li {
+    color: #0180cf;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+.dropdown-content_dairy ul li:hover {background-color: #ddd;} /*list under dairy*/
+.dropdown:hover .dairy {background-color: #62b0e1; color: white;} /*veggie button*/
+.dropdown:hover .dropdown-content_dairy {display: block;}
+
+
+.dropdown-content_meat {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 9px 18px 0px rgba(0,0,0,0.2);
+    border-radius: 10px;
+    z-index: 1;
+}
+.dropdown-content_meat ul li {
+    color: #ec9900; /*text color - darker*/
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+.dropdown-content_meat ul li:hover {background-color: #ddd;} /*list under meat*/
+.dropdown:hover .dropdown-content_meat {display: block;}
+.dropdown:hover .meat {background-color: #ffc55a; color: white;}
+
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 9px 18px 0px rgba(0,0,0,0.2);
+    border-radius: 10px;
+    z-index: 1;
+}
+.dropdown:hover .dropdown-content {display: block;}
+
+
+
+/*---------------------Check after clicking -----------------------------*/
+/* Include the padding and border in an element's total width and height */
+  
+  /* Remove margins and padding from the list */
+  /* Remove margins and padding from the list */
+* {
+    box-sizing: border-box;
+}
+ul {
+    margin: 0;
+    padding: 0;
+}
+  
+  /* Style the list items */
+ul li {
+    cursor: pointer;
+    position: relative;
+    padding: 12px 8px 12px 40px;
+    list-style-type: none;
+    background: #eee;
+    font-size: 18px;
+    transition: 0.2s;
+
+    /* make the list items unselectable */
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* Set all odd list items to a different color (zebra-stripes) */
+ul li:nth-child(odd) {
+    background: #f9f9f9;
+}
+
+/* Darker background-color on hover */
+ul li:hover {
+    background: #ddd;
+}
+
+/* When clicked on, add a background color */
+ul li.checked {
+    background: #888;
+    color: #fff;
+    /* text-decoration: line-through; */
+}
+ul li.checked_veggie {
+    background: #30c07f;
+    color: #fff;
+}
+ul li.checked_dairy {
+    background: #62b0e1;
+    color: #fff;
+}
+ul li.checked_meat {
+    background: #ffc55a;
+    color: #fff;
+}
+.wrapper{
+    display:grid;
+    margin: 25px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-column-gap: 50px;
+    grid-row-gap: 50px;
+    grid-auto-rows: minmax(100px, auto);
+
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+
+}
+
+.wrapper > div{
+    background: #ddd;
+    padding: 10px;
+}
+.wrapper > div:nth-child(odd) {
+    background: #ffe1aa;
+}
+
+img:hover{
+    opacity: 0.7;
+    cursor: pointer;
+    background-color: #f1f1f1;
+}
+.text {
+    color: black;
+    font-size: 20px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+
+
