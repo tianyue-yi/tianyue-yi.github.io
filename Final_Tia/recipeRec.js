@@ -70,8 +70,8 @@ function recipeDisplay() {
   }
   
   myImage.setAttribute("src", imageArray[imageIndex]);
-  myImage.setAttribute("width", "300");
-  myImage.setAttribute("height", "230");
+  myImage.setAttribute("width", "350");
+  myImage.setAttribute("height", "268");
   
   document.getElementById("myRec").appendChild(myImage);
   $("IMG").wrap("<a href='https://tasty.co/' ></a>");
