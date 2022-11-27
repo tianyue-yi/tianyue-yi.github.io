@@ -1,0 +1,144 @@
+
+body{
+    margin:0;
+    font-family: 'Quicksand', sans-serif;
+}
+.container{
+    height:100%;
+    overflow-y: scroll;
+    /* scroll-snap-type: y mandatory; */
+    scroll-snap-type: y proximity;
+}
+a { 
+    /* hoving boxes */
+    float: left;
+    color: black;
+    padding: 12px 18px; /* height, length */
+    border-radius: 4px;
+    text-decoration: none;
+}
+
+.header {
+    background-color: rgba(136, 255, 255, 0.548);
+    overflow: hidden;
+    font-size: 20px;
+    padding: 20px 20px;
+}
+
+.header a.name_logo{
+    font-weight: 700;
+}
+.header a:hover {
+    background-color:#D9B5EB;
+}
+.header-right {
+    float: right;
+}
+@media screen and (max-width: 500px) {
+    .header a {
+      float: none;
+      display: block;
+      text-align: left;
+    }
+    
+    .header-right {
+      float: none;
+    }
+  }
+
+.panel{
+    height: 70%;
+    scroll-snap-align: end;
+}
+
+.self-intro{
+    font-size:32px;
+    padding: 22px 18rem; /* height, length */
+    background-color: rgb(245, 245, 245);
+}
+.panel-two{
+    /* background-color: rgb(255, 4, 4); */
+    background-color: rgb(245, 245, 245);
+}
+.panel-three{
+    background-color: rgb(245, 245, 245);
+}
+
+.placeHolder_proj1 {
+    display: block;
+    position: relative;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+    height: 400px;
+    width: 952px;
+    
+}
+.placeHolder_proj1:hover {
+    position: relative;
+    transition: .15s;
+    height: 420.17px;
+    width: 1000px;
+    cursor: pointer;
+}
+.placeHolder_proj2 {
+    display: block;
+    position: relative;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+    height: 400px;
+    width: 952px;
+    
+}
+.placeHolder_proj2:hover {
+    position: relative;
+    transition: .15s;
+    height: 420.17px;
+    width: 1000px;
+    cursor: pointer;
+}
+.placeHolder_proj3 {
+    display: block;
+    position: relative;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+    height: 400px;
+    width: 952px;
+    
+}
+.placeHolder_proj3:hover {
+    position: relative;
+    transition: .15s;
+    height: 420.17px;
+    width: 1000px;
+    cursor: pointer;
+}
+
+
+img {
+    display: block;
+    position: relative;
+    top: 50%;
+    left: 40%;
+    transform: translate(-50%, -50%);
+    
+    width: 82%;
+}
+.col_content {
+    display: flex;
+    /* border-radius: 25px;
+    border: 15px solid #fd9689; */
+    background-color: rgb(245, 245, 245);
+    /* flex: 50%; */
+    /* padding: 17px; */
+    /* padding-top: 10px;
+    padding-bottom: 15px; */
+}
+.row_content {
+    display: flex;
+}
