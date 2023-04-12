@@ -33,7 +33,8 @@ a {
     font-weight: 700;
 }
 .header a:hover {
-    background-color:rgba(143, 133, 253, 0.5);
+    /* background-color:rgba(143, 133, 253, 0.5); */
+    background-color: #f2785c;
 }
 .header-right {
     float: right;
@@ -213,7 +214,7 @@ a {
 }
 #design::before {
     /* Highlight color */
-    background-color: #fba87e;
+    background-color: #f2785c;
     content: "";
     position: absolute;
     width: calc(100% + 4px);
@@ -229,7 +230,7 @@ a {
 }
 #model::before {
     /* Highlight color */
-    background-color: #83b1fa;
+    background-color: #a4d996;
     content: "";
     position: absolute;
     width: calc(100% + 4px);
@@ -245,7 +246,7 @@ a {
 }
 #animate::before {
     /* Highlight color */
-    background-color: #70db9b;
+    background-color: #f2785c;
     content: "";
     position: absolute;
     width: calc(100% + 4px);
@@ -261,7 +262,7 @@ a {
 }
 #research::before {
     /* Highlight color */
-    background-color: rgb(255, 209, 130);
+    background-color: #a4d996;
     content: "";
     position: absolute;
     width: calc(100% + 4px);
