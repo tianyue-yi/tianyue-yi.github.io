@@ -164,8 +164,8 @@ a {
 
 .bubblePosition_g {
     position: absolute;
-    left: 80%;
-    top: 37%;
+    left: 75%;
+    top: 50%;
     min-height: 20px;
     bottom: auto;
     width: 250px;
@@ -350,7 +350,7 @@ a {
 
 .bubblePosition_pc {
     left: -325%;
-    top: 9%;
+    top: 10%;
     min-height: 20px;
     bottom: auto;
     width: 200px;
