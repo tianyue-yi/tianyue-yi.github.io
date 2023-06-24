@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>3ddumpling; template</title>
+    <meta charset="utf-8">
+    <meta name="description" content="3ddumpling; template">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link type="text/css" href="./styles.css" rel="stylesheet"/>
+  </head>
+
+  <style>
+    model-viewer {
+      background-color: rgb(245,245,245);
+    }
+  </style>
+
+  <body style="background-color: rgb(245,245,245);">
+    <!-- <model-viewer> HTML element -->
+    <model-viewer src="web_dumpling.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls poster="poster.webp" shadow-intensity="1" camera-target="-0.55m 1.901m -65.27m" camera-orbit="-55deg 65deg 140.8m" field-of-view="30deg">
+      <div class="progress-bar hide" slot="progress-bar">
+          <div class="update-bar"></div>
+      </div>
+    </model-viewer>
+    <script src="script.js"></script>
+    <!-- Loads <model-viewer> for browsers: -->
+    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.0.1/model-viewer.min.js"></script>
+  </body>
+</html>
