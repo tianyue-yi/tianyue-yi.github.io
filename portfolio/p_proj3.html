@@ -1,0 +1,154 @@
+<html>
+
+    <head>
+        <title> Food Waste Reduction App </title>
+        <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1">
+        <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="p_proj2.css">
+
+        <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
+    </head>
+
+    <style>
+        .thisPanel {
+            height: 90%;
+            scroll-snap-align: end;
+            position: relative;
+            overflow: hidden;
+            background-color: rgba(161, 205, 132, 0.2);
+            
+        }
+        .center_text{
+            text-align: center;
+            margin-left: 10%;
+            margin-right: 10%;
+            padding-top: 100px;
+        }
+        .concept_page {
+            border-top: 3px dotted #a1cd84;
+            top: 50%;
+            left: 50%;
+            transform: translate(-20%, -50%);
+        }
+        .regular_text {
+            margin-left: 19%;
+            padding-top: 100px;
+            font-weight: 400; 
+            font-size: 22px;
+        }
+
+        .division {
+            border-top: 3px dotted rgb(254, 122, 86);
+            background:linear-gradient(0deg,rgb(254, 122, 86),rgb(213, 196, 110));  
+            position: absolute;
+            border: none;
+            height: 100%;
+            width: 1%;
+            top: 20%;
+            left: 40%;
+            transform: translate(-50%, 0%);
+        }
+
+        .box-left {
+            position: absolute;
+            width: 500px; 
+            height: 100px;  
+            left: 20%;
+            top: 40%;
+            border: dotted 5px;
+            border-color: rgb(254, 122, 86) transparent transparent transparent ;
+            border-radius: 1000px 2000px / 520px;
+            transform: rotate(90deg);
+            
+        }
+        .box-right {
+            position: absolute;
+            width: 500px; 
+            height: 100px;  
+            left: 50%;
+            top: 40%;
+            border: dotted 5px;
+            border-color: transparent transparent rgb(102, 191, 88) transparent ;
+            border-radius: 1000px 2000px / 520px;
+            transform: rotate(90deg);
+            
+        }
+
+    </style>
+
+    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.1.1/model-viewer.min.js"></script>
+    
+
+    <body>
+        <div class="header" id="myHeader">
+            <a href="https://tianyue-yi.github.io/portfolio/p_home.html" class="name_logo">Tianyue Yi</a>
+            <div class="header-right">
+                <a href="https://tianyue-yi.github.io/portfolio/about.html" class="header-link">About</a>
+                <a href="https://www.linkedin.com/in/tianyueyi/">Contact</a>
+                <a href="https://acrobat.adobe.com/link/review?uri=urn:aaid:scds:US:da99def1-1190-4a7e-b5e8-d9eefbbabbe2">CV</a>
+            </div>
+        </div>
+
+        <div class="content">
+            <div class="panel">
+                <p>dingoeiwn</p>
+                
+                <!-- <div style="left: 20%; position: absolute;">
+                    <iframe src="https://tianyue-yi.github.io/seniorProject/web_dpl_model/index.html" height="500px" width="500px"></iframe>
+                </div> -->
+
+                <div style="position: absolute; left: 20%;">
+                    <img src="sp_pot.jpg" width="400px">
+                </div>
+            </div>
+
+            <div class="thisPanel" style="height: 80%;">
+                <div class="center_text">
+                    <p class="center_text" style="font-weight: 600; font-size: 18px;">
+                        This is an animated interactive recipe toturial using augmented reality (AR). 
+                    </p>
+                    <p class="center_text" style="font-weight: 400; font-size: 18px; padding: 0%;">
+                        It is designed to entertain and facilitate people who live away from home, and would like to make their home-made food themselves.
+                    </p>
+                </div>
+                <!-- <hr class="concept_page"> -->
+                
+            </div>
+
+<!-- storytelling -->
+            <div class="panel">
+                <p class="regular_text">
+                    backstory telling page
+                </p>
+
+                <div class="division"></div>
+                <div class="box-left"></div>
+                <!-- <div style="left: 20%; position: absolute;">
+                    <iframe src="https://tianyue-yi.github.io/seniorProject/web_dpl_model/index.html" height="500px" width="500px"></iframe>
+                </div> -->
+                
+            </div>
+
+<!-- animations -->
+            <div class="thisPanel">
+                <p class="regular_text">
+                    animation reels page
+                </p>
+
+                <div class="box-right"></div>
+                
+                <!-- <div style="left: 20%; position: absolute;">
+                    <iframe src="https://tianyue-yi.github.io/seniorProject/web_dpl_model/index.html" height="500px" width="500px"></iframe>
+                </div> -->
+
+                
+            </div>
+
+            
+
+        </div>
+
+        
+    </body>
+
+</html>
