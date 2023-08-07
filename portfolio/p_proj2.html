@@ -1,0 +1,113 @@
+<html>
+
+    <head>
+        <title> Food Waste Reduction App </title>
+        <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1">
+        <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="p_proj2.css">
+
+        <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
+    </head>
+    
+    <body>
+        <div class="header" id="myHeader">
+            <a href="https://tianyue-yi.github.io/portfolio/p_home.html" class="name_logo">Tianyue Yi</a>
+            <div class="header-right">
+                <a href="https://tianyue-yi.github.io/portfolio/about.html" class="header-link">About</a>
+                <a href="https://www.linkedin.com/in/tianyueyi/">Contact</a>
+                <a href="https://acrobat.adobe.com/link/review?uri=urn:aaid:scds:US:da99def1-1190-4a7e-b5e8-d9eefbbabbe2">CV</a>
+            </div>
+        </div>
+
+        <div class="content">
+            <div class="panel">
+                <img class="regular" src="proj2_1.png">
+                <div class="line_l"> &nbsp </div>
+                <div class="line_r"> &nbsp </div>
+                <div class="line_horizon_r"> &nbsp </div>
+            </div>
+            <div class="panel">
+                <img class="regular" src="proj2_persona.png">
+                <div class="line_l"> &nbsp </div>
+                <div class="line_r"> &nbsp </div>
+                <div class="line_horizon_l"> &nbsp </div>
+                <hr class="persona">
+            </div>
+            <div class="panel">
+                <img class="regular" src="proj2_prob.png">
+                <div class="line_l"> &nbsp </div>
+                <div class="line_r"> &nbsp </div>
+                <div class="line_horizon_l"> &nbsp </div>
+                <div class="rect_r"></div>
+                <!-- <hr class="persona"> -->
+            </div>
+            
+            <div class="panel">
+                <img class="regular" src="proj2_swot.png">
+                <div class="line_l"> &nbsp </div>
+                <div class="line_r"> &nbsp </div>
+                <div class="line_horizon_r"> &nbsp </div>
+            </div>
+           
+            <div class="panel">
+                <img class="regular" src="proj2_brainstorm.png">
+                <div class="line_l"> &nbsp </div>
+                <div class="line_r"> &nbsp </div>
+                <div class="line_horizon_l"> &nbsp </div>
+            </div>
+
+            <div class="panel">
+                <img class="regular" src="proj2_user_flow.png">
+                <div class="line_l"> &nbsp </div>
+                <div class="line_r"> &nbsp </div>
+                <div class="line_horizon_r"> &nbsp </div>
+                <hr class="userflow">
+            </div>
+
+            <div class="panel">
+                <img class="regular" src="proj2_final_look_figma.png">
+                <div class="line_l"> &nbsp </div>
+                <div class="line_r"> &nbsp </div>
+                <div class="line_horizon_l"> &nbsp </div>
+            </div>
+
+            <div class="panel" style="height: 120%;"> 
+                <div class="line_l"> &nbsp </div>
+                <div class="line_r"> &nbsp </div>
+                <div class="line_horizon_l"> &nbsp </div>
+                <!-- <video src="proj2_final_look_figma.mp4"></video> -->
+                <video class="video" controls width="1000">
+                    <source src="proj2_final_look_figma2.mp4"
+                            type="video/webm">                
+                </video>                
+            </div>
+
+            <div class="panel"></div>
+        
+        </div>
+        
+    <!-- js not working 
+        https://www.w3schools.com/howto/howto_js_sticky_header.asp
+    -->
+    <script>
+        window.onscroll = function() {myFunction()};
+        
+        var header = document.getElementById("myHeader");
+        var sticky = header.offsetTop;
+        
+        function myFunction() {
+          if (window.pageYOffset > sticky) {
+            header.classList.add("sticky");
+          } else {
+            header.classList.remove("sticky");
+          }
+        }
+    </script>
+
+    </body>
+    
+
+
+    
+    
+</html>
