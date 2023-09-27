@@ -1,0 +1,204 @@
+---
+title: "AE 07: Importing and cleaning lottery data"
+author: Your name
+format: html
+editor: visual
+---
+
+# Packages
+
+We will use the following four packages in this application exercise.
+
+-   **tidyverse**: For data import, wrangling, and visualization.
+-   **readxl:** For importing data from Excel.
+-   **janitor:** For cleaning column names.
+-   **scales:** For formatting **ggplot2** scales.
+
+```{r}
+#| label: load-packages
+#| message: false
+
+library(tidyverse)
+library(readxl)
+library(janitor)
+library(scales)
+```
+
+# Powerball
+
+A **lottery** is form of gambling that involves the drawing of numbers at random for a prize.[^1] In the United States, Powerball is a popular multi-state lottery played in 45 states, Washington D.C., Puerto Rico, and the US Virgin Islands. [^2] The basic rules are (relatively) straightforward :
+
+[^1]: Source: [Wikipedia](https://en.wikipedia.org/wiki/Lottery).
+
+[^2]: Source: [Powerball.com](https://www.powerball.com/)
+
+-   Powerball costs \$2 per play.
+-   Players select five numbers between 1 and 69 for the white balls, then select one number between 1 and 26 for the red Powerball.
+-   Drawings are held every Monday, Wednesday, and Saturday night.
+-   The Powerball jackpot grows until it is won. Players win a prize by matching one of the 9 ways to win. The jackpot is won by matching all five white balls in any order and the red Powerball.[^3]
+
+[^3]: For our purposes here, we will only examine the Powerball jackpot results.
+
+The Colorado Lottery provides detailed information on Powerball drawings dating back to August 2001.[^4] For these exercises we will work with a dataset containing every Powerball drawing in the Colorado Lottery's database.
+
+[^4]: Drawing history can be obtained from their [website](https://www.coloradolottery.com/en/player-tools/winning-history/).
+
+# Import and clean the data
+
+The dataset is available for download as an Excel spreadsheet.
+
+![](images/powerball-excel.png){fig-alt="A screenshot of the Powerball spreadsheet opened in Excel."}
+
+**Demo:** Import the data file so it looks like below. Store it as `powerball_raw`.
+
+``` r
+#> # A tibble: 2,420 × 61
+#>    `Draw date`      `Last Day To Claim` `Winning Numbers` Powerball `Power Play`
+#>    <chr>            <dttm>              <chr>                 <dbl>        <dbl>
+#>  1 Saturday, 9/23/… 2024-03-21 00:00:00 1 - 12 - 20 - 33…        21            2
+#>  2 Wednesday, 9/20… 2024-03-18 00:00:00 16 - 27 - 59 - 6…        23            3
+#>  3 Monday, 9/18/23  2024-03-16 00:00:00 2 - 21 - 26 - 40…         9            3
+#>  4 Saturday, 9/16/… 2024-03-14 00:00:00 8 - 11 - 19 - 24…         5            2
+#>  5 Wednesday, 9/13… 2024-03-11 00:00:00 22 - 30 - 37 - 4…        18            3
+#>  6 Monday, 9/11/23  2024-03-09 00:00:00 9 - 25 - 27 - 53…         5            2
+#>  7 Saturday, 9/9/23 2024-03-07 00:00:00 11 - 19 - 29 - 6…        25            2
+#>  8 Wednesday, 9/6/… 2024-03-04 00:00:00 9 - 14 - 20 - 23…         1            3
+#>  9 Monday, 9/4/23   2024-03-02 00:00:00 1 - 26 - 32 - 46…        13            3
+#> 10 Saturday, 9/2/23 2024-02-29 00:00:00 25 - 38 - 42 - 6…        19            4
+#> # ℹ 2,410 more rows
+#> # ℹ 56 more variables: Jackpot <dbl>, `Jackpot Cash Value` <dbl>,
+#> #   `Jackpot Winners` <dbl>, `Jackpot CO Winners` <dbl>, `Match 5 Prize` <dbl>,
+#> #   `Match 5 CO Winners` <dbl>, `Match 5 Prize (with Power Play)` <dbl>,
+#> #   `Match 5 CO Winners (with Power Play)` <dbl>,
+#> #   `Match 4 + Powerball Prize` <dbl>, `Match 4 + Powerball CO Winners` <dbl>,
+#> #   `Match 4 + Powerball Prize (with Power Play)` <dbl>, …
+```
+
+```{r}
+#| label: import-powerball
+
+# add code here
+library(readxl)
+POWERBALL_from_0001_01_01_to_2023_09_25 <- read_excel("data/POWERBALL-from_0001-01-01_to_2023-09-25.xlsx", 
+    col_types = c("text", "date", "text", 
+        "numeric", "numeric", "numeric", 
+        "numeric", "numeric", "numeric", 
+        "numeric", "numeric", "numeric", 
+        "numeric", "numeric", "numeric", 
+        "numeric", "numeric", "numeric", 
+        "numeric", "numeric", "numeric", 
+        "numeric", "numeric", "numeric", 
+        "numeric", "numeric", "numeric", 
+        "numeric", "numeric", "numeric", 
+        "numeric", "numeric", "numeric", 
+        "numeric", "numeric", "numeric", 
+        "numeric", "numeric", "numeric", 
+        "numeric", "numeric", "text", "numeric", 
+        "numeric", "numeric", "numeric", 
+        "numeric", "numeric", "numeric", 
+        "numeric", "numeric", "numeric", 
+        "numeric", "numeric", "numeric", 
+        "numeric", "numeric", "numeric", 
+        "numeric", "numeric", "numeric"))
+View(POWERBALL_from_0001_01_01_to_2023_09_25)
+```
+
+**Your turn:** Clean the raw data to fix the following issues:
+
+-   Standardize the column names using `snake_case` format.
+-   Create columns with appropriate data types for the date of the drawing as well as the weekday. Append these columns to the beginning of the data frame.
+-   Our analysis focuses specifically on jackpot outcomes. Drop columns related to other prizes offered through the Powerball lottery (e.g. Match $N$, Double Play)
+
+Store the cleaned data frame as `powerball`.
+
+```{r}
+#| label: clean-powerball
+
+# add code here
+powerball <- POWERBALL_from_0001_01_01_to_2023_09_25 |>
+  janitor::clean_names() |>
+  separate(
+    col = draw_date,
+    into = c("wday", "draw_date"),
+    sep = ","
+  ) |>
+  mutate(
+    draw_date = mdy(draw_date),
+    wday = wday(x = draw_date, label = TRUE), 
+    .before = last_day_to_claim
+  ) |>
+  select(draw_date:jackpot_winners)
+```
+
+# Why does it seem like everyone is winning big?
+
+Anyone living in the United States in the past few years is likely to have seen news reports whenever the jackpot grows dramatically. The 10 biggest lottery jackpots in the United States have all occurred since 2015. What is driving this trend?
+
+## How the jackpot value has changed over time
+
+In order to address this question, let's start first with a simpler question: **how has the jackpot value changed over time?** The jackpot amount varies for each drawing depending on the number of tickets sold as well as if the jackpot is rolling over from the previous drawing.
+
+**Your turn:** Create a line graph visualizing the jackpot value for every Powerball drawing over time.
+
+```{r}
+#| label: jackpot-over-time
+
+# add code here
+ggplot(data = powerball, mapping = aes(x = draw_date, y = jackpot))+
+  geom_line()+
+  scale_y_continuous(labels = label_dollar())
+```
+
+There definitely seems to be an increase in the typical Powerball jackpot values since 2015.
+
+## Distribution of winning numbers
+
+To investigate this further, let's look at the distribution of the white balls + the red Powerball. Presumably since the numbers are drawn at random, then they should be uniformly distributed.
+
+**Your turn:** Convert `winning_numbers` into numeric values with one row for each drawing for each number. Keep just two columns: the drawing date and the winning numbers. Store this as `powerball_white`.
+
+```{r}
+#| label: separate-numbers
+ 
+# add code here
+powerball |>
+  separate_longer_delim(
+    cols = winning_numbers,
+    delim = "-"
+  ) |>
+  mutate(
+    winning_numbers = parse_number(x = winning_numbers)
+  ) |>
+  ggplot(mapping = aes(winning_numbers))+
+  geom_histogram(binwidth = 1)
+```
+
+**Your turn:** Create a similarly structured data frame for the red Powerball called `powerball_red`. Ensure it has the same column names as `powerball_white`.
+
+```{r}
+#| label: powerball-red
+
+# add code here
+```
+
+**Your turn:** Combine the two data frames and create a histogram visualizing the distribution of the winning numbers, faceted between the white balls and the Red Powerballs.
+
+```{r}
+#| label: powerball-dist
+
+# add code here
+```
+
+**Your turn:** Visualize the distribution of white balls (numbers drawn) over time using a scatterplot + a smoothing line.
+
+```{r}
+#| label: powerball-white-over-time
+
+# add code here
+```
+
+# Why wrangle data in R
+
+**Question:** Why should we bother with writing code to clean our data files (e.g. renaming columns, cleaning variables, separating into new columns/rows) instead of opening the Excel file and editing the data in there to prepare it for a clean import?
+
+*Your answer here*
