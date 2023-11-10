@@ -1,0 +1,119 @@
+<html>
+
+    <head>
+        <title> Tia's Portfolio</title>
+        <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1">
+        <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="home.css">
+
+        <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
+    </head>
+
+    <body>
+        <div class="container">
+            <div class="header" style="background-color: rgb(255, 250, 250);">
+                <a class="header-link" href="p_home.html" class="name_logo" style="font-weight: 700;">Tianyue Yi</a>
+                <div class="header-right">
+                    <a href="about.html" class="header-link">About</a>
+                    <a href="https://www.linkedin.com/in/tianyueyi/" class="header-link">Contact</a>
+                    <a href="https://acrobat.adobe.com/id/urn:aaid:sc:VA6C2:fdd5353a-55ae-4129-aa2f-f54c832bbc48" class="header-link">CV</a>
+                </div>
+            </div>
+
+
+            <div class="content">
+                <div class="panel" style="background-color: rgb(255, 250, 250)">
+                    <div class="line_horizon" style="background-color: #00a140;"></div>
+                    
+                    <p class="hi" style="padding-left: 75px; padding-top: 10px;">
+                        Hi, welcome to
+                    </p>
+
+                    <p class="heading" style="padding-left: 100px; padding-top: 50px;">
+                        Tia's Workspace
+                    </p> 
+
+                        
+                    <div>
+                        <!-- tilted text -> absolute -->
+                        <p class="tilted">
+                            Hover the items and explore!
+                        </p>
+                    </div>
+                    <!-- plant pc cushion baseball -->
+                    <div class="hoverme_plant">
+                        <a href="model.html">
+                            
+                            <div class="plant"></div>
+                            <div class="headBubble bubblePosition_plant hoverBubble_plant">
+                                <h3>Modeling Showcase</h3>
+                                <p>I'm an enthusiast of modeling. I've made products and environment with Maya, Rhino and AutoCAD. </p>
+                                
+                            </div>
+                        </a>
+                    </div>
+                    <div class="hoverme_g">
+                        <a href="anim.html">
+                            
+                            <div class="bglove"></div>
+                            <div class="headBubble bubblePosition_g hoverBubble_g">
+                                <h3>Animation Reel</h3>
+                                <p>My passion for 3D animation is inextinguishable, and a unique way of mine to tell stories. It relaxes and entertains me. (So does softball!)</p>
+                                
+                            </div>
+                        </a>
+                    </div>
+                    <div class="hoverme_c">
+                        <a href="design.html">
+                            
+                            <div class="cushion"></div>
+                            <div class="headBubble bubblePosition_c hoverBubble_c">
+                                <h3>Product Design</h3>
+                                <p>I am a UX design student with a three-year industrial design background.</p>
+                                
+                            </div>
+                        </a>
+                    </div>
+                    <div class="hoverme_pc">
+                        <a href="research.html">
+                            
+                            <div class="pc"></div>
+                            <div class="headBubble_pc bubblePosition_pc hoverBubble_pc">
+                                <h3>Research Experience</h3>
+                                <p>I am a UX and data visualization design research assistant.</p>
+                                
+                            </div>
+                        </a>
+                    </div>
+                    
+                    
+                    </div>
+                </div>
+                
+                <!-- absolute -->
+                
+            
+            
+        </div>
+
+
+
+    </body>
+
+
+    <script>
+        window.onscroll = function() {myFunction()};
+        
+        var header = document.getElementById("myHeader");
+        var sticky = header.offsetTop;
+        
+        function myFunction() {
+          if (window.pageYOffset > sticky) {
+            header.classList.add("sticky");
+          } else {
+            header.classList.remove("sticky");
+          }
+        }
+    </script>
+
+</html>

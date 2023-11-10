@@ -1,0 +1,385 @@
+<html>
+
+    <head>
+        <title> Senior project </title>
+        <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1">
+        <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="p_proj2.css">
+        <link href="https://fonts.googleapis.com/css2?family=Lato&family=Didact+Gothic&display=swap" rel="stylesheet">
+        <!-- <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap" rel="stylesheet"> -->
+    </head>
+
+    <style>
+        .content{
+            margin:0;
+            font-family: 'Didact Gothic', sans-serif;
+        }
+        .thisPanel {
+            height: 90%;
+            scroll-snap-align: end;
+            position: relative;
+            overflow: hidden;
+            background-color: rgba(161, 205, 132, 0.4);
+        }
+        .center_text{
+            text-align: center;
+            margin-left: 10%;
+            margin-right: 10%;
+            padding-top: 100px;
+        }
+        .concept_page {
+            border-top: 3px dotted #a1cd84;
+            top: 50%;
+            left: 50%;
+            transform: translate(-20%, -50%);
+        }
+        .subtitle {
+            margin-left: 15%;
+            padding-top: 50px;
+            font-weight: 400; 
+            font-size: 22px;
+        }
+        .title_firstPage {
+            margin-left: 15%;
+            padding-top: 100px;
+            font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            font-weight: 600; 
+            font-size: 32px;
+        }
+        .regular_text {
+            margin-left: 15%;
+            padding-right: 65%;
+
+            font-weight: 400; 
+            font-size: 16px;
+        }
+        .title_text {
+            margin-left: 15%;
+            padding-right: 500px;
+            font-weight: 400; 
+            font-size: 16px;
+        }
+
+        .division-green {
+            position: absolute;
+            width: 500px; 
+            height: 100px;  
+            left: 18%;
+            top: 40%;
+            border: dotted 5px;
+            border-color: rgb(102, 191, 88) transparent transparent transparent ;
+            border-radius: 1000px 2000px / 520px;
+            transform: rotate(90deg);
+        }
+        
+        .division-white {
+            position: absolute;
+            width: 500px; 
+            height: 100px;  
+            left: 18%;
+            top: 40%;
+            border: dotted 5px;
+            border-color: rgb(246, 248, 255) transparent transparent transparent ;
+            border-radius: 1000px 2000px / 520px;
+            transform: rotate(90deg);
+        }
+        .dots_lastpage {
+            position: absolute;
+            width: 500px; 
+            height: 100px;  
+            left: -5%;
+            top: 25%;
+            border: dotted 5px;
+            border-color: rgb(102, 191, 88);
+            border-radius: 1000px 2000px / 520px;
+            /* transform: rotate(90deg); */
+        }
+        .dots_emptpage {
+            position: absolute;
+            width: 500px; 
+            height: 100px;  
+            right: -5%;
+            top: 45%;
+            border: dotted 5px;
+            border-color: rgb(246, 248, 255);
+            border-radius: 1000px 2000px / 520px;
+            /* transform: rotate(90deg); */
+        }
+        .video-left {
+            position: absolute;
+            /* width: 700px; */
+            right: 0%;
+            top: 10%;
+        }
+        .chive {
+            position: absolute;
+            width: 38%;
+            left: 400; 
+            top: 338;
+        }
+        .pot {
+            position: absolute;
+            width: 30%;
+            left: 0; 
+            top: 50
+        }
+        .egg_scrambled{
+            position: absolute; 
+            width: 20%;
+            left: 150; 
+            top: 400;
+        }
+        .dumpling {
+            position: absolute; 
+            left: 650; 
+            top: 0;
+            width: 35%;
+        }
+        .spatula {
+            position: absolute; 
+            left: 400; 
+            top: 160;
+            width: 18%;
+        }
+        .egg {
+            position: absolute; 
+            right: 0; 
+            top: 300;
+            width: 30%;
+        }
+        .filling {
+            position: absolute; 
+            right:0; 
+            top: 130;
+            width: 20%;
+        }
+
+    </style>
+
+    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.1.1/model-viewer.min.js"></script>
+    
+
+    <body>
+        <div class="header" id="myHeader">
+            <a href="p_home.html" class="name_logo">Tianyue Yi</a>
+            <div class="header-right">
+                <a href="about.html" class="header-link">About</a>
+                <a href="https://www.linkedin.com/in/tianyueyi/">Contact</a>
+                <a href="https://acrobat.adobe.com/id/urn:aaid:sc:VA6C2:fdd5353a-55ae-4129-aa2f-f54c832bbc48">CV</a>
+            </div>
+        </div>
+
+        <div class="content">
+<!-- first page -->
+            <div class="panel">
+                
+            <!-- bg pics -->
+            <div style="opacity: 0.75;">
+                <img class="pot" src="images/web_pot.jpg">
+                <img class="chive" src="images/render_chive.jpg">
+                <!-- <picture style="position: absolute; left: 0; top: 50;">
+                    <img src="images/web_pot.jpg" width="250">
+                </picture> -->
+                <!-- <div style="position: absolute; left: 400; top: 338;">
+                    <img src="images/render_chive.jpg" width="450">
+                </div> -->
+                <img class="egg_scrambled" src="images/web_eggs.jpg">
+                <!-- <div style="position: absolute; left: 150; top: 400;">
+                    <img src="images/web_eggs.jpg" width="250">
+                </div> -->
+                <img class="dumpling" src="images/render_dumpling.jpg">
+                <!-- <div style="position: absolute; left: 650; top: 0;">
+                    <img src="images/render_dumpling.jpg" height="280">
+                </div> -->
+                <img class="spatula" src="images/web_spatula.jpg">
+                <!-- <div style="position: absolute; left: 400; top: 160;">
+                    <img src="images/web_spatula.jpg" width="250">
+                </div> -->
+                <img class="egg" src="images/render_egg.jpg" width="450">
+                <!-- <div style="position: absolute; right: 0; top: 300;">
+                    <img src="images/render_egg.jpg" width="450">
+                </div> -->
+                <img class="filling" src="images/render_filling.jpg" width="250">
+                <!-- <div style="position: absolute; right:0; top: 160;">
+                    <img src="images/render_filling.jpg" width="250">
+                </div> -->
+            </div>
+                
+
+                <p class="title_firstPage" style="position: absolute">
+                    Interactive Dumpling Making Recipe
+                </p>
+                <p class="subtitle" style="position: absolute; padding-top: 250; font-weight: 600;">
+                    Welcome to my senior project!
+                </p>
+                <p class="title_text" style="position: absolute; padding-top: 300; font-weight: 600;">
+                    I did this project when I was an Integrated Design and Media senior at New York University.
+                    It aimed to mitigate people's homesickness 
+                    by providing interactive animated cooking tutorials using augmented reality.
+                </p>
+
+            </div>
+
+            <div class="thisPanel" style="height: 80%;">
+                <div class="center_text">
+                    <p class="center_text" style="font-weight: 600; font-size: 18px;">
+                        This is an animated interactive recipe toturial using augmented reality (AR). 
+                    </p>
+                    <p class="center_text" style="font-weight: 400; font-size: 18px; padding: 0%;">
+                        It is designed to entertain and facilitate people who live away from home, and would like to make their home-made food themselves.
+                    </p>
+                </div>
+                <!-- <hr class="concept_page"> -->
+                
+            </div>
+
+<!-- storytelling -->
+            <div class="panel">
+                <p class="subtitle">
+                    Ideation
+                </p>
+                <br>
+                <p class="regular_text">
+                    The inspiration I've had for this project is the total failure I came across 
+                    when I was tryingt to make dumplings on the lunar new year eve (shown in the video).                 
+                </p>
+                <p class="regular_text">
+                    It occurred to me that there might be a problem where people away from home being unable to make their home food.
+                    The tutorial online isn't always same as their family versions. That being said, having a "family-taught" tutorial would be helpful.
+                </p>
+                <p class="regular_text">
+                    The first recipe in this series is <span style="font-weight: 600;">dumpling making</span> from my mom.
+                </p>
+
+                <div class="division-green"></div>
+                <!-- <div style="left: 20%; position: absolute;">
+                    <iframe src="https://tianyue-yi.github.io/seniorProject/web_dpl_model/index.html" height="500px" width="500px"></iframe>
+                </div> -->
+                
+                <!-- <div class="video-left">
+                    <video controls width="800">
+                        <source src="folding.mp4"
+                                type="video/webm">                
+                    </video>
+                </div> -->
+                
+                <div style="right:0%; top: 10%; position: absolute;">
+                    <iframe width="800" height="450" src="https://www.youtube.com/embed/9K8yasBFCzg" frameborder="0" allowfullscreen></iframe>
+                </div>
+
+            </div>
+
+<!-- animations -->
+            <div class="thisPanel">
+                <div class="center_text">
+                    <p class="center_text" style="font-weight: 400; font-size: 18px;">
+                        After taking <span style="font-weight: 600;">3D Modeling, 3D Animation and 3D for AR</span>, 
+                        and due to my passion about animated movies,
+                        I've decided to use those techniques to build a <span style="font-weight: 600;">useful, interactive and fun</span>
+                        cooking toturial series.
+                        
+                    </p>
+                    
+                </div>
+                <div class="dots_emptpage"></div>
+                
+            </div>
+
+<!-- MORE animations -->
+            <div class="panel" style="height: 100%;">
+                
+                <!-- 1-1 -->
+                <div style="left:0%; top: 5%; position: absolute;">
+                    <iframe width="500" height="280" src="https://www.youtube.com/embed/VBz9ZEZkh3o" frameborder="0" autoplay allowfullscreen></iframe>
+                </div>
+                <!-- 1-3 -->
+                <div style="right:-1%; top: 5%; position: absolute;">
+                    <iframe width="500" height="280" src="https://www.youtube.com/embed/aNsCFrolfVI" frameborder="0" autoplay allowfullscreen></iframe>
+                </div>
+                <!-- 1-2 -->
+                <div style="right:32%; top: 5%; position: absolute;">
+                    <iframe width="500" height="280" src="https://www.youtube.com/embed/QNeFMRRU1h0" frameborder="0" autoplay allowfullscreen></iframe>
+                </div>
+                
+                
+                <!-- 2-1 -->
+                <div style="left:0%; top: 50%; position: absolute;">
+                    <iframe width="500" height="280" src="https://www.youtube.com/embed/E2FYYqrSVvw" frameborder="0" autoplay allowfullscreen></iframe>
+                </div>
+                <!-- 2-3 -->
+                <div style="right:-1%; top: 50%; position: absolute;">
+                    <iframe width="500" height="280" src="https://www.youtube.com/embed/6_2eyqV4FTI" frameborder="0" allowfullscreen></iframe>
+                </div>
+                <!-- 2-2 -->
+                <div style="right:32%; top: 50%; position: absolute;">
+                    <iframe width="500" height="280" src="https://www.youtube.com/embed/TDVDoYz95GE" frameborder="0" autoplay allowfullscreen></iframe>
+                </div>
+                
+
+            </div>
+
+            <div class="thisPanel">
+                <p class="subtitle">
+                    Involved with AR
+                </p>
+                <br>
+                <p class="regular_text">
+                    Augmented reality facilitates the interactivity of this project.                
+                </p>
+                <p class="regular_text">
+                    There are two phases I've got through with AR. I mainly use 
+                    <span style="font-weight: 600;">Lens Studio</span> (by SnapChat) at first, and did a couple of user testing.  
+                </p>
+
+                <div class="division-white"></div>
+
+                <div style="right:0%; top: 10%; position: absolute;">
+                    <iframe src="https://drive.google.com/file/d/1JqRs2_2ILvdSLovJO9_oetyMwmgccGKS/preview" width="850" height="480" allow="autoplay"></iframe>
+                </div>
+                
+            </div>
+
+            <div class="panel">
+                <div class="center_text">
+                    <p class="center_text" style="font-weight: 400; font-size: 18px;">
+                        However, the Lens Studio doesn't allow users to use both their hands, because one has to <span style="font-weight: 600;">hold a device</span>.
+                        Also, when the animation is done, the file has been too big for Lens Studio.                
+                    </p>
+                    <p class="center_text" style="font-weight: 400; font-size: 18px; padding: 0%;">
+                        Luckily, digital artist Carla Gannis and my AR professor Mark Skwarek gave me this idea of <span style="font-weight: 600;">Hololens</span>, 
+                        which is a pair of AR glasses connected to Unity.
+                        In this case, the hands are free so that the interactivity will be brought to the next level.
+                    </p>
+                </div>
+
+                <div class="dots_lastpage"></div>
+            
+            </div>
+            
+            <div class="thisPanel" style="height: 100%;">
+
+                <!-- hololens -->
+                <div style="left:0%; top: 12.5%; position: absolute;">
+                    <iframe src="https://drive.google.com/file/d/1ybojdlfiLGUgfALqCbu5hBG3xAWdv3z0/preview" width="750" height="428.5" allow="autoplay"></iframe>
+                </div>
+                <!-- hololens testing -->
+                <div style="right:0%; top: 5%; position: absolute;">
+                    <iframe width="550" height="300" src="https://drive.google.com/file/d/1-A6jeSf1PJa-Q2-pUEkN8zsfQrsPUYf4/preview" frameborder="0" autoplay allowfullscreen></iframe>
+                </div>
+                
+                <div style="left:55%; top: 60%; position: absolute;">
+                    <img src="images/SP_MPIC.jpg" width="50%">
+                    
+                </div>
+                <div style="left:78%; top: 60%; position: absolute;">
+                    <img src="images/SP_MYPIC1.png" width="90%">
+                </div>
+
+            </div>
+
+        </div>
+
+        
+    </body>
+
+</html>
