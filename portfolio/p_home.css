@@ -130,7 +130,7 @@ a {
     position: relative;
     top: 50%;
     left: 40%;
-    transform: translate(-50%, 0%);
+    transform: translate(-50%, -50%);
     width: 85%;
 }
 
