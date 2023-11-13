@@ -24,6 +24,14 @@ a {
     /* scroll-snap-type: y mandatory; */
     scroll-snap-type: y proximity;
 }
+.header-link { 
+    /* hoving boxes */
+    float: left;
+    color: black;
+    padding: 12px 18px; /* height, length */
+    border-radius: 4px;
+    text-decoration: none;
+}
 .header {
     background-color: rgb(245,245,245); 
     overflow: hidden;
@@ -50,14 +58,14 @@ a {
       float: none;
     }
 }
-.content{
+/* .content{
     overflow: auto;
     position: absolute;
     top: 89px;
     left: 0;
     right: 0;
     bottom: 0;
-}
+} */
 
 .panel{
     height: 80%;
